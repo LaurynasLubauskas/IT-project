@@ -13,6 +13,7 @@ body {
   justify-content: center;
   padding: 20px;
   color: #e9e9e9;
+  background-color: #000000;
 }
 
 .container {
@@ -220,4 +221,37 @@ input:focus {
 
 input:hover {
   border-color: #e0e0e0;
+}
+
+small {
+  color: #7d7d7d;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background-color: #7d7d7d;
+  color: #e9e9e9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+  margin-top: auto;
+}
+
+button[type="submit"]:hover {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  background-color: #5b5b5b;
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
 }
