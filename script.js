@@ -80,7 +80,26 @@ function updateSummary() {
   .reduce((acc,transaction) => acc + transaction.amount ,0);
 
   //ui
-  balanceEl.textContent = balance;
-  incomeAmountEl.textContent = income;
-  expenseAmountEl.textContent = expenses;
+  balanceEl.textContent = formatCurrency(balance);
+  incomeAmountEl.textContent = formatCurrency(income);
+  expenseAmountEl.textContent = formatCurrency(expenses);
 }
+
+function formatCurrency(number){
+  return new Intl.NumberFormat("en-Us", {
+    style: "currency",
+    currency: "EUR",
+  }).format(number);
+}
+
+function removeTransaction(id) {
+  transactions = transactions.filter(transaction => transaction.id !== id)
+
+  localStorage.setItem("transactions", JSON.stringify(transactions))
+
+  updateTransactionList();
+  updateSummary();
+}
+
+updateTransactionList();
+updateSummary();

@@ -123,11 +123,11 @@ font-weight: 500;
 }
 
 #transaction-list::-webkit-scrollbar-track{
-  background-color: #383838;
+  background-color: #949494;
   border-radius: 4px;
 }
 #transaction-list::-webkit-scrollbar-thumb{
-  background-color: #262626;
+  background-color: #717171;
 }
 #transaction-list::-webkit-scrollbar-thumb:hover{
   background-color: #242424;
